@@ -1,0 +1,7 @@
+import math
+x=int(input())
+from math import *
+def function(x):
+    result=math.log( (math.e**(1/math.sin(x)+1))/(5/4+1/(x**15),[1+x**2])
+    return result
+print(fanction(x))
