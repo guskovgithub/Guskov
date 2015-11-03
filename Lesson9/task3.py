@@ -1,3 +1,4 @@
+
 words=open('TextForTask3.txt','r')
 stat={}
 for word in words.read().split():
@@ -31,4 +32,3 @@ for i in range(0,int(len(PopularWords)/2)+1,2):
 
 
 
-           
