@@ -4,6 +4,7 @@ ourWords={}
 for line in text:
     line=line.replace(' ','').replace(',',' ').replace('   ','').replace('.','').replace('\t','').replace('\n','').split('-')
   
+  
     ourWords[line[0]]=line[1]
 text.close()
 
