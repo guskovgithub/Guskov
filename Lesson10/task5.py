@@ -24,7 +24,7 @@ class Point:
     def __abs__(self):
         return (self.x**2 + self.y**2)**0.5
  
-    def plosh(a, b, c):    # ФОРМУЛА ГЕРОНА 
+def plosh(a, b, c):    # ФОРМУЛА ГЕРОНА 
         return ((abs(a-b)+abs(b-c)+abs(a-c))*(abs(a-b)+abs(b-c)-abs(a-c))*(abs(a-b)+abs(a-c)-abs(b-c))*(abs(b-c)+abs(a-c)-abs(a-b)))**0.5/4
 print('!!!  НАИБОЛЬШАЯ ПЛОЩАДЬ   !!!')
 print(' кол-во точек')
@@ -35,8 +35,8 @@ a,b,c=p[:3]
 for vector1 in p:
     for vector2 in p:
         for vector3 in p:
-            if Point.plosh(vector1,vector2,vector3) > S:
-                S = Point.plosh(vector1,vector2,vector3)
+            if plosh(vector1,vector2,vector3) > S:
+                S = plosh(vector1,vector2,vector3)
                 a,b,c=vector1,vector2,vector3
             
 print(' наибольшая площадь ',S)

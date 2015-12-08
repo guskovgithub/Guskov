@@ -23,7 +23,7 @@ class Point:
         return Point.new(other.x-self.x, other.y-self.y)
     def __abs__(self):
         return (self.x**2 + self.y**2)**0.5
-    def perimeter(a, b, c):
+def perimeter(a, b, c):
         return abs(a-b)+abs(b-c)+abs(a-c)
 print('!!!  НАИБОЛЬШИЙ ПЕРИМЕТР   !!!')
 print(' кол-во точек')
@@ -34,8 +34,8 @@ a,b,c=p[:3]
 for vector1 in p:
     for vector2 in p:
         for vector3 in p:
-            if Point.perimeter(vector1,vector2,vector3) > per:
-                per = Point.perimeter(vector1,vector2,vector3)
+            if perimeter(vector1,vector2,vector3) > per:
+                per = perimeter(vector1,vector2,vector3)
                 a,b,c=vector1,vector2,vector3
             
 print(' наибольший периметр ',per)
