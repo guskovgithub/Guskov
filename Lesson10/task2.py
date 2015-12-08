@@ -20,20 +20,18 @@ class Point:
     def __abs__(self):
                 return (int(self.x)**2 + int(self.y)**2)**0.5
     
-print('!!! КООРДИНАТЫ ЦЕНТРА МАСС !!!')
+print('!!! НАИБОЛЕЕ УДАЛЕННАЯ ТОЧКА !!!')
 print(' кол-во точек') 
-N=int(input())
-max=0
-sumX=0
-sumY=0
-Xc,Yc=0,0
-for i in range(N):
-    A=Point(input())
-    sumX,sumY=A.x,A.y
-    Xc+=sumX/N
-    Yc+=sumY/N
-
-print('Координыты центра  масс {', Xc,',',Yc,'}')
 
 
+N = int(input())
+max = 0
+x,y = 0,0
+for i in range (N):
+    a = Point(input())
+    if abs(a) > max:
+        max = abs(a)
+        x = a.x
+        y = a.y
+print('НАИБОЛЕЕ УДАЛЕННАЯ ТОЧКА {', x,',',y,'}')
  
